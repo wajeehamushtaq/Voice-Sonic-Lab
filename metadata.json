@@ -1,0 +1,5 @@
+{
+  "name": "Audio Tone Master",
+  "description": "An AI-powered web application for mastering audio files. Adjust pitch, tempo, and EQ, or get suggestions from an AI assistant to get the perfect sound.",
+  "requestFramePermissions": []
+}
