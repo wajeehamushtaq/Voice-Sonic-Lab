@@ -2,7 +2,8 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import type { AudioSettings } from "../types";
 
-const API_KEY = process.env.API_KEY;
+// Use Vite's import.meta.env for environment variables in the browser build
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY || import.meta.env.GEMINI_API_KEY || import.meta.env.API_KEY;
 
 if (!API_KEY) {
   console.warn("API_KEY environment variable not set. AI features will not work.");

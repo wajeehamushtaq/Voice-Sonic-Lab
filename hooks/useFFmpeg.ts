@@ -80,7 +80,7 @@ export const useFFmpeg = () => {
         // Read output
         const data = ffmpeg.FS('readFile', outputFileName);
         lastProcessedDataRef.current = data;
-        const url = URL.createObjectURL(new Blob([data.buffer], { type: 'audio/mpeg' }));
+        const url = URL.createObjectURL(new Blob([data], { type: 'audio/mpeg' }));
         setProcessedAudioUrl(url);
 
         if (exportAfterProcessingRef.current) {
@@ -103,7 +103,7 @@ export const useFFmpeg = () => {
       return;
     }
 
-    const blob = new Blob([lastProcessedDataRef.current.buffer], { type: 'audio/mpeg' });
+    const blob = new Blob([lastProcessedDataRef.current], { type: 'audio/mpeg' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     document.body.appendChild(a);
