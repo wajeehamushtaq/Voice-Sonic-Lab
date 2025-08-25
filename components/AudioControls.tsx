@@ -45,8 +45,8 @@ export default function AudioControls({ settings, onSettingsChange, onPreview, i
     <div className={`p-6 bg-gray-800 rounded-xl border border-gray-700 space-y-6 ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}>
       <h2 className="text-xl font-bold text-white">Audio Controls</h2>
       <div className={`space-y-6 ${disabled ? 'pointer-events-none' : ''}`}>
-        <ControlSlider label="Pitch" value={settings.pitch} min={0.5} max={2.0} step={0.01} onChange={handleChange('pitch')} unit="x" />
-        <ControlSlider label="Tempo" value={settings.tempo} min={0.5} max={2.0} step={0.01} onChange={handleChange('tempo')} unit="x" />
+        <ControlSlider label="Pitch" value={settings.pitch} min={0.5} max={1.25} step={0.01} onChange={handleChange('pitch')} unit="x" />
+        <ControlSlider label="Tempo" value={settings.tempo} min={0.5} max={1.25} step={0.01} onChange={handleChange('tempo')} unit="x" />
         <ControlSlider label="Bass" value={settings.bass} min={-20} max={20} step={1} onChange={handleChange('bass')} unit=" dB" />
         <ControlSlider label="Mid" value={settings.mid} min={-20} max={20} step={1} onChange={handleChange('mid')} unit=" dB" />
         <ControlSlider label="Treble" value={settings.treble} min={-20} max={20} step={1} onChange={handleChange('treble')} unit=" dB" />

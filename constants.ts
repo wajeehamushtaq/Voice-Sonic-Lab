@@ -2,8 +2,8 @@
 import type { AudioSettings } from './types';
 
 export const DEFAULT_AUDIO_SETTINGS: AudioSettings = {
-  pitch: 1.0,
-  tempo: 1.0,
+  pitch: 0.5,
+  tempo: 0.8,
   bass: 0,
   mid: 0,
   treble: 0,
@@ -39,8 +39,8 @@ export const DEFAULT_AUDIO_SETTINGS: AudioSettings = {
 export const EMOTIONAL_PRESETS: Record<string, AudioSettings> = {
   happy: {
     ...DEFAULT_AUDIO_SETTINGS,
-    pitch: 1.05,
-    tempo: 1.1,
+    pitch: 0.5,
+    tempo: 0.8,
     bass: 2,
     mid: 1,
     treble: 3,
@@ -53,8 +53,8 @@ export const EMOTIONAL_PRESETS: Record<string, AudioSettings> = {
   
   sad: {
     ...DEFAULT_AUDIO_SETTINGS,
-    pitch: 0.95,
-    tempo: 0.85,
+    pitch: 0.5,
+    tempo: 0.8,
     bass: -2,
     mid: -1,
     treble: -3,
@@ -67,8 +67,8 @@ export const EMOTIONAL_PRESETS: Record<string, AudioSettings> = {
   
   energetic: {
     ...DEFAULT_AUDIO_SETTINGS,
-    pitch: 1.02,
-    tempo: 1.15,
+    pitch: 0.5,
+    tempo: 0.8,
     bass: 4,
     mid: 2,
     treble: 5,
@@ -81,8 +81,8 @@ export const EMOTIONAL_PRESETS: Record<string, AudioSettings> = {
   
   calm: {
     ...DEFAULT_AUDIO_SETTINGS,
-    pitch: 1.0,
-    tempo: 0.9,
+    pitch: 0.5,
+    tempo: 0.8,
     bass: 1,
     mid: 0,
     treble: -1,
@@ -95,8 +95,8 @@ export const EMOTIONAL_PRESETS: Record<string, AudioSettings> = {
   
   mysterious: {
     ...DEFAULT_AUDIO_SETTINGS,
-    pitch: 0.98,
-    tempo: 0.95,
+    pitch: 0.5,
+    tempo: 0.8,
     bass: 3,
     mid: -2,
     treble: -4,
@@ -109,8 +109,8 @@ export const EMOTIONAL_PRESETS: Record<string, AudioSettings> = {
   
   intimate: {
     ...DEFAULT_AUDIO_SETTINGS,
-    pitch: 1.0,
-    tempo: 0.95,
+    pitch: 0.5,
+    tempo: 0.8,
     bass: 2,
     mid: 1,
     treble: 0,
@@ -123,8 +123,8 @@ export const EMOTIONAL_PRESETS: Record<string, AudioSettings> = {
   
   epic: {
     ...DEFAULT_AUDIO_SETTINGS,
-    pitch: 0.98,
-    tempo: 1.05,
+    pitch: 0.5,
+    tempo: 0.8,
     bass: 6,
     mid: 3,
     treble: 4,
@@ -137,8 +137,8 @@ export const EMOTIONAL_PRESETS: Record<string, AudioSettings> = {
   
   dreamy: {
     ...DEFAULT_AUDIO_SETTINGS,
-    pitch: 1.01,
-    tempo: 0.88,
+    pitch: 0.5,
+    tempo: 0.8,
     bass: 1,
     mid: -1,
     treble: 2,
@@ -151,8 +151,8 @@ export const EMOTIONAL_PRESETS: Record<string, AudioSettings> = {
   
   aggressive: {
     ...DEFAULT_AUDIO_SETTINGS,
-    pitch: 1.03,
-    tempo: 1.2,
+    pitch: 0.5,
+    tempo: 0.8,
     bass: 5,
     mid: 4,
     treble: 6,
@@ -165,8 +165,8 @@ export const EMOTIONAL_PRESETS: Record<string, AudioSettings> = {
   
   romantic: {
     ...DEFAULT_AUDIO_SETTINGS,
-    pitch: 0.99,
-    tempo: 0.92,
+    pitch: 0.5,
+    tempo: 0.8,
     bass: 2,
     mid: 1,
     treble: 1,

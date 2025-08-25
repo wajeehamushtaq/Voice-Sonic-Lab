@@ -61,10 +61,10 @@ export default function EmotionalPresets({ onPresetSelect, disabled }: Emotional
       <div className="mt-6 p-4 bg-gray-700 rounded-lg">
         <h3 className="text-sm font-semibold text-gray-300 mb-2">How it works:</h3>
         <ul className="text-xs text-gray-400 space-y-1">
-          <li>• <strong>Happy:</strong> Higher pitch, faster tempo, bright EQ</li>
-          <li>• <strong>Sad:</strong> Lower pitch, slower tempo, dark EQ, long reverb</li>
-          <li>• <strong>Energetic:</strong> Fast tempo, punchy compression, bright EQ</li>
-          <li>• <strong>Calm:</strong> Slower tempo, warm EQ, gentle reverb</li>
+          <li>• <strong>Happy:</strong> Slightly higher pitch (+2%), faster tempo (+5%), bright EQ</li>
+          <li>• <strong>Sad:</strong> Slightly lower pitch (-2%), slower tempo (-8%), dark EQ, long reverb</li>
+          <li>• <strong>Energetic:</strong> Faster tempo (+8%), punchy compression, bright EQ</li>
+          <li>• <strong>Calm:</strong> Slower tempo (-5%), warm EQ, gentle reverb</li>
           <li>• <strong>Mysterious:</strong> Dark EQ, long reverb, delay effects</li>
         </ul>
       </div>
