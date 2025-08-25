@@ -13,8 +13,8 @@ export default defineConfig(({ mode }) => {
       plugins: [crossOriginIsolation()],
       server: {
         headers: {
-          "Cross-Origin-Embedder-Policy": "unsafe-none",
-          "Cross-Origin-Opener-Policy": "unsafe-none"
+          "Cross-Origin-Embedder-Policy": "require-corp",
+          "Cross-Origin-Opener-Policy": "same-origin"
         }
       },
       resolve: {
