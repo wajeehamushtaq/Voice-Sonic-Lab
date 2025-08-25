@@ -15,6 +15,12 @@ export const useFFmpeg = () => {
   const lastProcessedDataRef = useRef<Uint8Array | null>(null);
   const exportAfterProcessingRef = useRef<boolean>(false);
 
+  const cloneToArrayBuffer = (source: Uint8Array): ArrayBuffer => {
+    const buffer = new ArrayBuffer(source.byteLength);
+    new Uint8Array(buffer).set(source);
+    return buffer;
+  };
+
   // ✅ Load FFmpeg only once
   const load = useCallback(async () => {
     if (!ffmpegRef.current) {
@@ -80,7 +86,7 @@ export const useFFmpeg = () => {
         // Read output
         const data = ffmpeg.FS('readFile', outputFileName);
         lastProcessedDataRef.current = data;
-        const url = URL.createObjectURL(new Blob([data], { type: 'audio/mpeg' }));
+        const url = URL.createObjectURL(new Blob([cloneToArrayBuffer(data)], { type: 'audio/mpeg' }));
         setProcessedAudioUrl(url);
 
         if (exportAfterProcessingRef.current) {
@@ -103,7 +109,7 @@ export const useFFmpeg = () => {
       return;
     }
 
-    const blob = new Blob([lastProcessedDataRef.current], { type: 'audio/mpeg' });
+    const blob = new Blob([cloneToArrayBuffer(lastProcessedDataRef.current)], { type: 'audio/mpeg' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     document.body.appendChild(a);
