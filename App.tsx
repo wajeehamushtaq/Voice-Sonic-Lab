@@ -10,6 +10,7 @@ import AudioControls from './components/AudioControls';
 import AudioPlayer from './components/AudioPlayer';
 import AiSuggestions from './components/AiSuggestions';
 import ProjectActions from './components/ProjectActions';
+import EmotionalPresets from './components/EmotionalPresets';
 import { Toaster, toast } from 'sonner';
 import './index.css'
 
@@ -79,6 +80,7 @@ export default function App(): React.ReactNode {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2 space-y-8">
             <FileUpload onFileChange={handleFileChange} disabled={!isReady} />
+            <EmotionalPresets onPresetSelect={setSettings} disabled={!audioFile} />
             <AudioControls settings={settings} onSettingsChange={setSettings} onPreview={handlePreview} isProcessing={isProcessing} disabled={!audioFile} />
           </div>
           <div className="lg:col-span-3 space-y-8">
